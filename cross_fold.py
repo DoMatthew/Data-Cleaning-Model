@@ -1,3 +1,13 @@
+import pandas
+import sklearn.metrics
+import sklearn.linear_model
+import sklearn.neighbors
+import sklearn.tree
+import sklearn.model_selection
+import re
+from scipy.stats import ttest_ind
+from sklearn.model_selection import cross_val_score
+
 def cross_fold_validation(classifier, frame, folds):
     
     features = frame.drop(columns='label').copy()
